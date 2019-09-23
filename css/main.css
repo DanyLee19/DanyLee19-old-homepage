@@ -1715,7 +1715,7 @@ article:last-child .post-eof {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c87d81;
+  background: #ffd254;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1964,11 +1964,15 @@ article:last-child .post-eof {
 .footer-inner {
   text-align: center;
 }
+#animate {
+  animation: iconAnimate 1.33s ease-in-out infinite;
+}
 .with-love {
   color: #808080;
   display: inline-block;
   margin: 0 5px;
 }
+.footer-note,
 .powered-by,
 .theme-info {
   display: inline-block;
@@ -2504,7 +2508,6 @@ ul.breadcrumb li + li:last-child {
   box-sizing: border-box;
   color: #555;
   width: 240px;
-  opacity: 0;
 }
 .sidebar-inner.affix {
   position: fixed;
