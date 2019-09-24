@@ -63,10 +63,12 @@
 <meta property="og:site_name" content="李丹阳的博客">
 <meta property="og:description" content="引言&amp;emsp;&amp;emsp;作为开源世界的支持者，为了不失逼格的分享学习经验与编码技巧，我们有必要建立一个私人博客，一来构建博客的过程十分有趣，二来构建博客也是一个能够提升发现/解决问题能力的有效途径，三来在面试时掏出自己的私人博客总会比CSDN等大众博客更有说服力（主要是赏心悦目）。有趣+有效+有意义，就是我们构建私人博客的动机。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-23T15:13:40.751Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/23/hexo-tutorial/domain.png">
+<meta property="og:updated_time" content="2019-09-24T03:44:01.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo+github构建个人Blog">
 <meta name="twitter:description" content="引言&amp;emsp;&amp;emsp;作为开源世界的支持者，为了不失逼格的分享学习经验与编码技巧，我们有必要建立一个私人博客，一来构建博客的过程十分有趣，二来构建博客也是一个能够提升发现/解决问题能力的有效途径，三来在面试时掏出自己的私人博客总会比CSDN等大众博客更有说服力（主要是赏心悦目）。有趣+有效+有意义，就是我们构建私人博客的动机。">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/23/hexo-tutorial/domain.png">
   <link rel="canonical" href="http://yoursite.com/2019/09/23/hexo-tutorial/">
 
 
@@ -248,11 +250,19 @@
                 
               
 
-              <time title="创建时间：2019-09-23 22:28:43 / 修改时间：23:13:40" itemprop="dateCreated datePublished" datetime="2019-09-23T22:28:43+08:00">2019-09-23</time>
+              <time title="创建时间：2019-09-23 22:28:43" itemprop="dateCreated datePublished" datetime="2019-09-23T22:28:43+08:00">2019-09-23</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-24 11:44:01" itemprop="dateModified" datetime="2019-09-24T11:44:01+08:00">2019-09-24</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -282,7 +292,37 @@
       
         <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>&emsp;&emsp;作为开源世界的支持者，为了不失逼格的分享学习经验与编码技巧，我们有必要建立一个私人博客，一来构建博客的过程十分有趣，二来构建博客也是一个能够提升发现/解决问题能力的有效途径，三来在面试时掏出自己的私人博客总会比CSDN等大众博客更有说服力（主要是赏心悦目）。有趣+有效+有意义，就是我们构建私人博客的动机。</p>
 <a id="more"></a>
-
+<p><strong>使用hexo+github搭建个人博客有如下优点：</strong></p>
+<ol>
+<li>放置在xxx.github.io中的全是静态文件，不需要手写后台，访问速度快。</li>
+<li>因为不需要后台，所以每必要为博客搭建专属服务器，省时省力。</li>
+<li>hexo与github相互配合相当默契，搭建的时候十分舒畅。</li>
+</ol>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ul>
+<li>请提前注册一个<a href="https://github.com" target="_blank" rel="noopener">github</a>账号并且配置SSH-key，并在您的计算机安装<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">Git</a>。</li>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo</a>官方文档首页中详述了Hexo安装方法，按照教程安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>，确保计算机拥有Git以及Node.js后即可安装Hexo。</li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT</a>是一个基于Hexo的博客主题，拥有完整的文档与美丽大方的外观，整体效果就是本博客的样子啦。</li>
+</ul>
+<h2 id="搭建github博客"><a href="#搭建github博客" class="headerlink" title="搭建github博客"></a>搭建github博客</h2><h3 id="创建xxx-github-io仓库"><a href="#创建xxx-github-io仓库" class="headerlink" title="创建xxx.github.io仓库"></a>创建xxx.github.io仓库</h3><p>&emsp;&emsp;新建一个名为xxx.github.io的仓库，xxx为你在github的username，是登录时使用的账号，而不是你的昵称哦！此外，我们可以注意到由于username唯一，所以每个用户只能构建一个这样可以直接使用域名访问的仓库。<br>这里注意三点：</p>
+<blockquote>
+<ol>
+<li>github需要完成邮箱验证才能提供此服务。</li>
+<li>构建的仓库名字必须为xxx.github.io，xxx为你的用户名。</li>
+<li>创建的仓库需要一段时间后才会生效，如果半个小时还不能访问，请尝试换个浏览器或者换个无线网。</li>
+</ol>
+</blockquote>
+<h3 id="绑定专属域名"><a href="#绑定专属域名" class="headerlink" title="绑定专属域名"></a>绑定专属域名</h3><p>&emsp;&emsp;搭建自己的专属博客，那必须配合专属域名啦，具体操作举例如下：<br>&emsp;&emsp;在<a href="https://wanwang.aliyun.com/domain/?utm_content=se_1001930825" target="_blank" rel="noopener">阿里云域名</a>或者其他（阿里广告费安排一下），注册一个域名，完成之后转到<a href="https://dc.console.aliyun.com" target="_blank" rel="noopener">域名控制台</a>,进行域名解析，分别添加两条记录：</p>
+<blockquote>
+<ol>
+<li>CNAME记录，记录值为域名，在这里为xxx.github.io。</li>
+<li>A记录，记录值为IP，我们先ping一下xxx.github.io就可以得到对应的IP。</li>
+</ol>
+</blockquote>
+<p>以上两条记录保证了我们注册的域名无论是否添加www都可以访问,控制台信息如下：</p>
+<div align="center">
+    <img width="600" src="/2019/09/23/hexo-tutorial/domain.png">
+</div>
+最后，在github项目根目录新建一个名为CNAME的文件，里面填写域名，临时绑定域名即可成功，"临时"是因为CNAME文件会在我们push项目时被覆盖，后期我们会在source目录中创建CNAME。
     </div>
 
     
@@ -389,7 +429,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">1.1.</span> <span class="nav-text">准备工作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建github博客"><span class="nav-number">2.</span> <span class="nav-text">搭建github博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建xxx-github-io仓库"><span class="nav-number">2.1.</span> <span class="nav-text">创建xxx.github.io仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定专属域名"><span class="nav-number">2.2.</span> <span class="nav-text">绑定专属域名</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
